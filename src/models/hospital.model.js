@@ -3,7 +3,7 @@ import HospitalGroup  from "./hospital_group.model";
 import OscannUid  from "./oscann_uid.model";
 import State  from "./state.model";
 
-const hospitalSchema = new Schema({
+const HospitalSchema = new Schema({
   id_hospital:{
     type: String,
     required: true,
@@ -45,4 +45,4 @@ const hospitalSchema = new Schema({
   }
 })
 
-export default model('Hospital', hospitalSchema);
+export default model('Hospital', HospitalSchema);

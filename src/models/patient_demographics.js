@@ -39,12 +39,7 @@ const PatientDemographicSchema = new Schema({
     required:true,
 
   },
-  update_date: Date,
-  updated:{
-    type:Boolean,
-    default:false,
-    required:false
-  }
+  update_date: Date
 });
 
 export default model('PatientDemographic', PatientDemographicSchema);

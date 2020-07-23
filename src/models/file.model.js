@@ -4,7 +4,7 @@ import Patient from "./Patient.model";
 import OscannUid from "./oscann_uid.model";
 import State from "./state.model";
 
-const fileSchema = new Schema({
+const FileSchema = new Schema({
   id_file:{
     type: String,
     required: true,
@@ -47,4 +47,4 @@ const fileSchema = new Schema({
   }
 })
 
-export default model('File', fileSchema);
+export default model('File', FileSchema);

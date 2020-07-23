@@ -1,10 +1,10 @@
 import { Schema, model } from "mongoose";
 import State from "./state.model";
 import Hospital from "./hospital.model";
-import Patient from "./patient.model";
+import Patient from "./Patient.model";
 import Study from "./study.model";
 
-const wmlHistorySchema = new Schema({
+const wmrthlHistorySchema = new Schema({
     id_wml:{
     type: String,
     required: true,

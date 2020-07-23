@@ -1,7 +1,7 @@
 import { Schema, model } from "mongoose";
-import Hospital from './hospital.model'
-import State from './state.model'
-import Study from './study.model'
+import Hospital from './hospital.model';
+import State from './state.model';
+import Study from './study.model';
 
 const synchronizeObjectSchema = new Schema({
   id_synchronize_object: {

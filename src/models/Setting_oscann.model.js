@@ -3,7 +3,11 @@ import State from './state.model';
 
 const SettingOscannSchema = new Schema({
   uid_oscann:String,
-  id_state:{type:Schema.Types.ObjectId,ref:State,required:false},
+  id_state:{
+    type:Schema.Types.ObjectId,
+    ref:State,
+    required:false,
+  },
   resolution:String,
   distance:String,
   width:String,
@@ -14,9 +18,8 @@ const SettingOscannSchema = new Schema({
   updated:{
     type:Boolean,
     default:false,
-    required:false
+    required:false,
   }
-
 })
 
 export default model('SettingOscann', SettingOscannSchema);

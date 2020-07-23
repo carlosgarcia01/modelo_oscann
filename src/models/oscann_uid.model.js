@@ -2,7 +2,7 @@ import { Schema, model } from "mongoose";
 import User from './user.model';
 import State from './state.model';
 
-const oscannUidSchema = new Schema({
+const OscannUidSchema = new Schema({
   uid_oscann:{
     type: String,
     required: true,
@@ -33,4 +33,4 @@ const oscannUidSchema = new Schema({
   }
 })
 
-export default model('OscannUid', oscannUidSchema);
+export default model('OscannUid', OscannUidSchema);

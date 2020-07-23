@@ -1,7 +1,7 @@
 import { Schema, model } from "mongoose";
 import State from './state.model';
 
-const hospitalGroupSchema = new Schema({
+const HospitalGroupSchema = new Schema({
   id_hospital_group: {
     type: String,
     required: true,
@@ -25,4 +25,4 @@ const hospitalGroupSchema = new Schema({
   }
 })
 
-export default model('HospitalGroup', hospitalGroupSchema);
+export default model('HospitalGroup', HospitalGroupSchema);

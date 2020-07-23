@@ -4,7 +4,7 @@ import User from './user.model'
 import State from "./state.model";
 import OscannUid from "./oscann_uid.model";
 
-const AESchema = new Schema({
+const SettingHostSchema = new Schema({
   id_computer_ae:{
     type: String,
     required: true,
@@ -41,7 +41,6 @@ const AESchema = new Schema({
   storage_available:Number,
   delete_concurrency:Number,
   deleted_date:Date,
-
   creation_date: {
     type: Date,
     default: new Date.now(),
@@ -54,4 +53,4 @@ const AESchema = new Schema({
   }
 })
 
-export default model('AE', AESchema);
+export default model('SettingHost', SettingHostSchema);

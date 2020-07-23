@@ -4,10 +4,6 @@ import StudyCatalog from './study_catalog.model';
 import State from './state.model';
 
 const diagnosticParamsSchema = new Schema({
-  id_diagnostic_params: {
-    type: String,
-    required: true,
-  },
   id_type_result: {
     type: Schema.Types.ObjectId, 
     ref: TypeResult, 
@@ -28,7 +24,7 @@ const diagnosticParamsSchema = new Schema({
   conclusion: String,
   creation_date: {
     type: Date,
-    default: Date.now(),
+    default: new Date.now(),
   },
   update_date: Date,
   updated:{

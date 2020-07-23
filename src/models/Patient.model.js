@@ -9,7 +9,10 @@ const PatientSchema = new Schema({
     type: String,
     required:true,
   },
-  id_global_patient: String,
+  id_global_patient:  {
+    type: String,
+    required:true,
+  },
   id_estudy: {
     type: Schema.Types.ObjectId,
     ref: Study,
@@ -30,7 +33,6 @@ const PatientSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: Hospital,
     required:false,
-
   },
   creation_date: {
     type: Date,

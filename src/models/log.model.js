@@ -4,11 +4,7 @@ import State from "./state.model";
 import User from "./user.model";
 
 const LogSchema = new Schema({
-
-  id_log:{
-    type:String,
-    required:true
-  },
+  
   id_process:{
     type:Schema.Types.ObjectId,
     ref:Process,

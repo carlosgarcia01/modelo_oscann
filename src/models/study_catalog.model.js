@@ -1,7 +1,8 @@
 import { Schema, model } from "mongoose";
 import State from './state.model';
-import OscannUid from './oscann_uid.model'
-import User from './user.model'
+import OscannUid from './oscann_uid.model';
+import User from './user.model';
+
 const StudyCatalogSchema = new Schema({
   id: String,
   series:{
@@ -39,9 +40,6 @@ const StudyCatalogSchema = new Schema({
     default:false,
     required:false
   }
-  
 })
 
 export default model('StudyCatalog', StudyCatalogSchema);
-
-

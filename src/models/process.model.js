@@ -1,7 +1,7 @@
 import { Schema, model } from "mongoose";
 import State from './state.model'
 
-const processdSchema = new Schema({
+const ProcessSchema = new Schema({
   id_process:{
     type: String,
     required: true,
@@ -24,4 +24,4 @@ const processdSchema = new Schema({
   }
 })
 
-export default model('Process', processdSchema);
+export default model('Process', ProcessSchema);

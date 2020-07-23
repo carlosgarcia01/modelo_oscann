@@ -1,8 +1,8 @@
 import { Schema, model } from "mongoose";
-import State from './state.model'
-import User from './state.model'
-import StudyCatalog from './study_catalog.model'
-import ReasonCancellation from './reason_cancellation.model'
+import State from './state.model';
+import User from './state.model';
+import StudyCatalog from './study_catalog.model';
+import ReasonCancellation from './reason_cancellation.model';
 
 const StudySchema = new Schema({
   id_local: String,

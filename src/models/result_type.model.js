@@ -1,7 +1,7 @@
 import { Schema, model } from "mongoose";
 import State from './state.model';
 
-const resultTypeSchema = new Schema({
+const ResultTypeSchema = new Schema({
   id_result_type:{
     type: String,
     required: true,
@@ -25,4 +25,4 @@ const resultTypeSchema = new Schema({
   }
 })
 
-export default model('ResultType', resultTypeSchema);
+export default model('ResultType', ResultTypeSchema);
