@@ -3,7 +3,7 @@ import TypeResult from './result_type.model';
 import StudyCatalog from './study_catalog.model';
 import State from './state.model';
 
-const diagnosticParamsSchema = new Schema({
+const DiagnosticParamsSchema = new Schema({
   id_type_result: {
     type: Schema.Types.ObjectId, 
     ref: TypeResult, 
@@ -34,4 +34,4 @@ const diagnosticParamsSchema = new Schema({
   }
 })
 
-export default model('DiagnosticParams', diagnosticParamsSchema);
+export default model('DiagnosticParams', DiagnosticParamsSchema);

@@ -1,11 +1,10 @@
 import { Schema, model } from "mongoose";
-import Hospital from './hospital.model'
-import State from './state.model'
+import Hospital from './hospital.model';
+import State from './state.model';
 import SynchronizeObject  from "./synchronize_object.model";
 import SettingHost  from "./setting_host.model";
 
-const SynchronizeObjectSchema = new Schema({
-
+const SyncObjectSchema = new Schema({
   id_hospital: {
     type: Schema.Types.ObjectId,
     ref: Hospital,
@@ -21,13 +20,11 @@ const SynchronizeObjectSchema = new Schema({
     ref:SettingHost,
     required:false,
   },
-  
   synchronize_objects:[{
-    type:Schema.Types.ObjectId,
-    ref:synchronizeObject,
-    required:false
+    type: Schema.Types.ObjectId,
+    ref: SynchronizeObject,
+    required: false
   }],
-
   creation_date: {
     type: Date,
     default: new Date.now(),
@@ -40,4 +37,4 @@ const SynchronizeObjectSchema = new Schema({
   }
 })
 
-export default model('SynchronizeObject', SynchronizeObjectSchema);
+export default model('SyncObject', SyncObjectSchema);

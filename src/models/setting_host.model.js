@@ -1,6 +1,6 @@
 import { Schema, model } from "mongoose";
 import Hospital from "./hospital.model";
-import User from './user.model'
+import User from './user.model';
 import State from "./state.model";
 import OscannUid from "./oscann_uid.model";
 

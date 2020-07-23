@@ -1,7 +1,7 @@
 import { Schema, model } from "mongoose";
-import State from './state.model'
+import State from './state.model';
 
-const userTypeSchema = new Schema({
+const UserTypeSchema = new Schema({
   id_user_type: {
     type: String,
     required: true,
@@ -26,4 +26,4 @@ const userTypeSchema = new Schema({
   }
 })
 
-export default model('UserType', userTypeSchema);
+export default model('UserType', UserTypeSchema);

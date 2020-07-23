@@ -1,7 +1,7 @@
 import { Schema, model } from "mongoose";
-import State from './state.model'
-import Hospital from './hospital.model'
-import UserType from './user_type.model'
+import State from './state.model';
+import Hospital from './hospital.model';
+import UserType from './user_type.model';
 
 const UserSchema = new Schema({
   id_user:{
@@ -41,11 +41,8 @@ const UserSchema = new Schema({
   updated:{
     type:Boolean,
     default:false,
-    required:false
+    required:false,
   }
 })
 
 export default model('User', UserSchema);
-
-
-

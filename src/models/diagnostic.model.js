@@ -1,8 +1,8 @@
 import { Schema, model } from "mongoose";
-import Diagnostic_params from './diagnostic_params.models'
-import Study from './study.model'
-import Result_type from './result_type.model'
-import State from './state.model'
+import Diagnostic_params from './diagnostic_params.models';
+import Study from './study.model';
+import Result_type from './result_type.model';
+import State from './state.model';
 
 const DiagnosticSchema = new Schema({
   id_global_diagnostic:{

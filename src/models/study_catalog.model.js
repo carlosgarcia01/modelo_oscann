@@ -14,14 +14,14 @@ const StudyCatalogSchema = new Schema({
     ref:OscannUid,
     required:false
   },
-  name: String,
-  description: String,
-  duration: Number,
   id_state:{
     type:Schema.Types.ObjectId,
     ref:State,
     required:false
-  } ,
+  },
+  name: String,
+  description: String,
+  duration: Number,
   creation_date: {
     type:Date,
     default: new Date.now(),

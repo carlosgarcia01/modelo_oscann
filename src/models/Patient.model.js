@@ -1,8 +1,8 @@
 import { Schema, model } from "mongoose";
-import Study  from './study.model';
+import Study from './study.model';
 import PatientDemographic from "./patient_demographics";
-import State  from './state.model';
-import Hospital  from './hospital.model';
+import State from './state.model';
+import Hospital from './hospital.model';
 
 const PatientSchema = new Schema({
   id_local_patient: {
@@ -13,11 +13,11 @@ const PatientSchema = new Schema({
     type: String,
     required:true,
   },
-  id_estudy: {
+  id_estudy: [{
     type: Schema.Types.ObjectId,
     ref: Study,
     required: false
-  },
+  }],
   id_PatientDemographic: {
     type: Schema.Types.ObjectId,
     ref: PatientDemographic,
@@ -28,7 +28,7 @@ const PatientSchema = new Schema({
     ref:State,
     required:false,
   },
-  list_ids_patient:[String],
+  ids_patient_local:[String],
   id_hospital: {
     type: Schema.Types.ObjectId,
     ref: Hospital,
@@ -48,4 +48,4 @@ const PatientSchema = new Schema({
   }
 });
 
-export default model('Patient', PatientSchema);
+export default model('Patient', patientSchema);

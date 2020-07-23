@@ -1,8 +1,8 @@
 import { Schema, model } from "mongoose";
-import StudyCatalog  from './study_catalog.model'
-import OscannUid  from './oscann_uid.model'
-import State  from './state.model'
-import User  from './user.model'
+import StudyCatalog  from './study_catalog.model';
+import OscannUid  from './oscann_uid.model';
+import State  from './state.model';
+import User  from './user.model';
 
 const SerieCatalogSchema = new Schema({
   id_serie_catalog: {

@@ -4,7 +4,7 @@ import Hospital from "./hospital.model";
 import Patient from "./Patient.model";
 import Study from "./study.model";
 
-const wmrthlHistorySchema = new Schema({
+const MirthMessageHistorySchema = new Schema({
     id_wml:{
     type: String,
     required: true,
@@ -44,4 +44,4 @@ const wmrthlHistorySchema = new Schema({
   }
 })
 
-export default model('WMLHistory', wmlHistorySchema);
+export default model('WMLHistory', MirthMessageHistorySchema);

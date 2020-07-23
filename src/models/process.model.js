@@ -1,5 +1,5 @@
 import { Schema, model } from "mongoose";
-import State from './state.model'
+import State from './state.model';
 
 const ProcessSchema = new Schema({
   id_process:{

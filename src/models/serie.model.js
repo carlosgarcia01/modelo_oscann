@@ -1,9 +1,9 @@
 import { Schema, model } from "mongoose";
-import User from './user.model'
-import Serie_catalog from './serie_catalog.model'
-import Oscann from './oscann_uid.model'
-import Study from './study.model'
-import State from './state.model'
+import User from './user.model';
+import Serie_catalog from './serie_catalog.model';
+import Oscann from './oscann_uid.model';
+import Study from './study.model';
+import State from './state.model';
 
 const SerieSchema = new Schema({
   id_global_serie: {
@@ -35,11 +35,23 @@ const SerieSchema = new Schema({
     ref:State,
     required:false 
   },
-  serie:{type:Boolean,default:false,required:false},
-  creation_date: {type:Date,default: new Date.now(),required:false},
+  serie:{
+    type:Boolean,
+    default:false,
+    required:false,
+  },
+  creation_date: {
+    type: Date,
+    default: new Date.now(),
+    required:false,
+  },
   update_date:Date ,
   completion_date:Date,
-  start_time: {type:Date,default: new Date.now(),required:false},
+  start_time: {
+    type:Date,
+    default: new Date.now(),
+    required:false,
+  },
   updated:{
     type:Boolean,
     default:false,
@@ -66,5 +78,3 @@ const SerieSchema = new Schema({
 })
 
 export default model('Serie', SerieSchema);
-
-

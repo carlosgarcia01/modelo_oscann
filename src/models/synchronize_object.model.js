@@ -3,7 +3,7 @@ import Hospital from './hospital.model';
 import State from './state.model';
 import Study from './study.model';
 
-const synchronizeObjectSchema = new Schema({
+const SynchronizeObjectSchema = new Schema({
   id_synchronize_object: {
     type: String,
     required: true,
@@ -30,4 +30,4 @@ const synchronizeObjectSchema = new Schema({
   update_date: Date,
 })
 
-export default model('synchronizeObject', synchronizeObjectSchema);
+export default model('SynchronizeObject', SynchronizeObjectSchema);

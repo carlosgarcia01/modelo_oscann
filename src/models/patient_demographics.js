@@ -1,6 +1,6 @@
 import { Schema, model } from "mongoose";
-import  State  from './state.model';
-import  Hospital  from './hospital.model'
+import State from './state.model';
+import Hospital from './hospital.model'
 
 const PatientDemographicSchema = new Schema({
   id_PatientDemographic: {

@@ -49,5 +49,4 @@ const StudySchema = new Schema({
   }
 })
 
-
 export default model('Study', StudySchema);
