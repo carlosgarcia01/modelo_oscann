@@ -6,7 +6,7 @@ const db =`mongodb://${MONGO_USER}:${MONGO_PASSWORD}${MONGO_OPTIONS}`;
 
 export async function connect() {
   try {
-    await mongoose.connect(db, {
+    await mongoose.connect('mongodb://localhost/mongodbgraphql', {
       useNewUrlParser: true,
       useUnifiedTopology: true
     })

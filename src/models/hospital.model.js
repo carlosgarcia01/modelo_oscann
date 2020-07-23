@@ -1,6 +1,6 @@
 import { Schema, model } from "mongoose";
 import HospitalGroup  from "./hospital_group.model";
-import UidOscann  from "./oscann_uid.model";
+import OscannUid  from "./oscann_uid.model";
 import State  from "./state.model";
 
 const hospitalSchema = new Schema({
@@ -11,67 +11,38 @@ const hospitalSchema = new Schema({
   id_hospital_group: {
     type: Schema.Types.id_hospital_group, 
     ref: HospitalGroup, 
-    required: true
+    required: false
   },
   id_oscann_uid:{
     type: Schema.Types.ObjectId, 
-    ref: UidOscann, 
-    required: true, 
+    ref: OscannUid, 
+    required: false, 
   },
   id_state: { 
     type: Schema.Types.ObjectId, 
     ref: State, 
-    required: true 
-  },
-  name: {
-    type: String,
-    required: true
-  },
-  address: {
-    type: String,
     required: false,
   },
-  telephone: {
-    type: String,
-    required: true,
-  },
-  postal_code: {
-    type: String,
-    required: false,
-  },
-  description: {
-    type: String,
-    required: false,
-  },
-  country: {
-    type: String,
-    required: true,
-  },
-  city: {
-    type: String,
-    required: true,
-  },
-  province: {
-    type: String,
-    required: false,
-  },
-  latitude: {
-    type: String,
-    required: false,
-  },
-  length: {
-    type: String,
-    requiered: false,
-  },
+  name: String,
+  address: String,
+  telephone: String,
+  postal_code: String,
+  description: String,
+  country: String,
+  city: String,
+  province: String,
+  latitude: String,
+  length: String,
   creation_date: {
     type: Date,
     default: Date.now(),
-    required: true,
   },
-  update_date: {
-    type: Date,
-    required: false,
-  },
+  update_date: Date,
+  updated:{
+    type:Boolean,
+    default:false,
+    required:false
+  }
 })
 
 export default model('Hospital', hospitalSchema);

@@ -12,39 +12,36 @@ const wmlHistorySchema = new Schema({
   id_hospital: {
     type: Schema.Types.ObjectId, 
     ref: Hospital, 
-    required: true,  
+    required: false,  
   },
   id_patient: {
     type: Schema.Types.ObjectId, 
     ref: Patient, 
-    required: true,  
+    required: false,  
   },
   id_study: {
     type: Schema.Types.ObjectId, 
     ref: Study, 
-    required: true,  
+    required: false,  
   },
   id_state: { 
     type: Schema.Types.ObjectId, 
     ref: State, 
-    required: true, 
+    required: false, 
   },
-  name: {
-    type: String,
-    required: false,
-  },
+  name: String,
   creation_date: {
     type: Date,
     default: Date.now(),
     required: true,
   },
-  update_date: {
-    type: Date,
-    required: false,
-  },
-  Data_Mirth_Message:{
-    "por definir"
-  },
+  update_date: Date,
+  Data_Mirth_Message:{},
+  updated:{
+    type:Boolean,
+    default:false,
+    required:false
+  }
 })
 
 export default model('WMLHistory', wmlHistorySchema);

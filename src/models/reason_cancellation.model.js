@@ -9,21 +9,20 @@ const ReasonCancellationSchema = new Schema({
   id_state:{
     type:Schema.Types.ObjectId,
     ref:State,
-    required:true,
+    required:false,
   },
-  description:{
-    type:String,
-    required:false
-  },
+  description:String,
   creation_date:{
     type:Date,
     default: new Date.now(),
     required:true
   },
-  update_date:{
-    type:Date,
-    required:true
-  },
+  update_date: Date,
+  updated:{
+    type:Boolean,
+    default:false,
+    required:false
+  }
 })
 
 export default model('ReasonCancellation', ReasonCancellationSchema);

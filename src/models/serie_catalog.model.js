@@ -5,30 +5,29 @@ import State  from './state.model'
 import User  from './user.model'
 
 const SerieCatalogSchema = new Schema({
-  id: String,
-  id_study_catalog: {
-    type:Schema.Types.ObjectId,
-    ref:StudyCatalog,
-    required:true
-  },
   id_serie_catalog: {
-    type:Array, 
-    required:true
+    type: String,
+    required:true,
   },
-  id_oscann_uid: {
+  id_study_catalog: {
+    type: Schema.Types.ObjectId,
+    ref: StudyCatalog,
+    required: false,
+  },
+  uid_oscann: {
     type:Schema.Types.ObjectId,
     ref:OscannUid,
-    required:true
+    required:false
   },
   id_state:{
     type:Schema.Types.ObjectId,
     ref:State,
-    required:true
+    required: false,
   } ,
   retired_by:{
     type:Schema.Types.ObjectId,
     ref:User,
-    required:true
+    required: false,
   },
   name: String,
   description: String,
@@ -38,9 +37,13 @@ const SerieCatalogSchema = new Schema({
   creation_date: {
     type:Date,
     default: new Date.now(),
-    required:true
   },
-  update_date: Date
+  update_date: Date,
+  updated:{
+    type:Boolean,
+    default:false,
+    required:false
+  }
 })
 
 export default model('SerieCatalog', SerieCatalogSchema);

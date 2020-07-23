@@ -10,34 +10,27 @@ const oscannUidSchema = new Schema({
   id_user: {
     type: Schema.Types.ObjectId, 
     ref: User, 
-    required: true, 
+    required: false, 
   },
   id_state: { 
     type: Schema.Types.ObjectId, 
     ref: State, 
-    required: true, 
+    required: false, 
   },
-  name: {
-    type: String,
-    required: true
-  },
-  instalation_date: {
-    type: String,
-    required: false,
-  },
-  version: {
-    type: String,
-    required: false,
-  },
+  name: String,
+  instalation_date: Date,
+  version: String,
   creation_date: {
     type: Date,
     default: Date.now(),
     required: true,
   },
-  update_date: {
-    type: Date,
-    required: false,
-  },
+  update_date: Date,
+  updated:{
+    type:Boolean,
+    default:false,
+    required:false
+  }
 })
 
 export default model('OscannUid', oscannUidSchema);

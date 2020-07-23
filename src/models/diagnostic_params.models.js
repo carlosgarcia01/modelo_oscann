@@ -3,48 +3,39 @@ import TypeResult from './result_type.model';
 import StudyCatalog from './study_catalog.model';
 import State from './state.model';
 
-
 const diagnosticParamsSchema = new Schema({
-  id_diagnostic_params:{
+  id_diagnostic_params: {
     type: String,
     required: true,
   },
-  id_type_result:{
+  id_type_result: {
     type: Schema.Types.ObjectId, 
     ref: TypeResult, 
-    required: true,
+    required: false,
   },
   id_study_catalog: {
     type: Schema.Types.ObjectId, 
     ref: StudyCatalog, 
-    required: true,
+    required: false,
   },
   id_state: { 
     type: Schema.Types.ObjectId, 
     ref: State, 
-    required: true 
+    required: false, 
   },
-  name:{
-    type: String,
-    required: true,
-  },
-  description:{
-    type: String,
-    required: false,
-  },
-  conclusion:{
-    type: String,
-    required: false,
-  },
+  name: String,
+  description: String,
+  conclusion: String,
   creation_date: {
     type: Date,
     default: Date.now(),
-    required: true,
   },
-  update_date: {
-    type: Date,
-    required: false,
-  },
+  update_date: Date,
+  updated:{
+    type:Boolean,
+    default:false,
+    required:false
+  }
 })
 
 export default model('DiagnosticParams', diagnosticParamsSchema);

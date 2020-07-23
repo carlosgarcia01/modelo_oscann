@@ -7,65 +7,51 @@ import OscannUid from "./oscann_uid.model";
 const AESchema = new Schema({
   id_computer_ae:{
     type: String,
-    required: true
+    required: true,
   },
   id_hospital:{
     type: Schema.Types.id_hospital, 
     ref: Hospital, 
-    required: true 
+    required: false, 
   },
   id_user:{
     type: Schema.Types.id_user, 
     ref: User, 
-    required: true 
+    required: false ,
   },
   id_state: { 
     type: Schema.Types.id_state, 
     ref: State, 
-    required: true 
+    required: false 
   },
   id_oscann:{
     type: Schema.Types.id_oscann, 
     ref: OscannUid, 
-    required: true 
+    required: false 
   },
-  host_name: {
-    type: String,
-    requiered: true,
-  },
-  port_mac: {
-    type: String,
-    requiered: true,
-  },
-  port:{
-    type: String,
-    requiered: false,
-  },
-  uri: {
-    type: String,
-    requiered: true,
-  },
-  departament: {
-    type: String,
-    requiered: true,
-  },
-  vendor_data: {
-    type: String,
-    requiered: true,
-  },
-  ae_group: {
-    type: String,
-    requiered: true,
-  },
+  host_name: String,
+  port_mac: String,
+  port: String,
+  uri: String,
+  departament: String,
+  root_path_file:String,
+  limited_upper:Number,
+  limited_lower:Number,
+  available_capacity:Number,
+  storage_available:Number,
+  delete_concurrency:Number,
+  deleted_date:Date,
+
   creation_date: {
     type: Date,
     default: new Date.now(),
-    required: true,
   },
-  update_date: {
-    type: Date,
-    required: false,
-  },
+  update_date: Date,
+  updated:{
+    type:Boolean,
+    default:false,
+    required:false
+  }
 })
 
 export default model('AE', AESchema);

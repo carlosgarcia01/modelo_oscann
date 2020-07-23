@@ -6,7 +6,12 @@ const StateSchema = new Schema({
     required: true,
   },
   name:String,
-  description:String
+  description:String,
+  creation_date: {
+    type: Date,
+    default: new Date.now(),
+  },
+  update_date: Date,
 })
 
 export default model('State', StateSchema);

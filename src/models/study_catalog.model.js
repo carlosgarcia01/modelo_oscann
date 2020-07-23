@@ -1,6 +1,7 @@
 import { Schema, model } from "mongoose";
 import State from './state.model';
 import OscannUid from './oscann_uid.model'
+import User from './user.model'
 const StudyCatalogSchema = new Schema({
   id: String,
   series:{
@@ -10,7 +11,7 @@ const StudyCatalogSchema = new Schema({
   id_oscann_uid: {
     type:Schema.Types.ObjectId,
     ref:OscannUid,
-    required:true
+    required:false
   },
   name: String,
   description: String,
@@ -18,17 +19,26 @@ const StudyCatalogSchema = new Schema({
   id_state:{
     type:Schema.Types.ObjectId,
     ref:State,
-    required:true
+    required:false
   } ,
   creation_date: {
     type:Date,
     default: new Date.now(),
-    required:true
+    required:false
   },
   update_date: Date,
   retired: Number,
-  retired_by: Number,
-  diagnostic:Boolean
+  retired_by:{
+    type:Schema.Types.ObjectId,
+    ref:User,
+    required: false,
+  },
+  diagnostic:Boolean,
+  updated:{
+    type:Boolean,
+    default:false,
+    required:false
+  }
   
 })
 

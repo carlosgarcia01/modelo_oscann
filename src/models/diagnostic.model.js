@@ -1,53 +1,48 @@
-const mongoose = require('mongoose');
-
-// eslint-disable-next-line import/newline-after-import
+import { Schema, model } from "mongoose";
 import Diagnostic_params from './diagnostic_params.models'
-import Study from './diagnostic_params.models'
-import Result_type from './diagnostic_params.models'
-import State from './diagnostic_params.models'
-const { Schema } = mongoose;
+import Study from './study.model'
+import Result_type from './result_type.model'
+import State from './state.model'
 
 const DiagnosticSchema = new Schema({
-  _id_global_diagnosis:{
+  _id_global_diagnostic:{
     type:String,
     required:true
   },
   id_study:{
     type:Schema.Types.ObjectId,
     ref:Study,
-    required:true
+    required:false,
   },
   id_result_type:{
     type:Schema.Types.ObjectId,
     ref:Result_type,
-    required:true
+    required:false,
   },
-  id_params_diagnosis:{
+  id_diagnostic_params:{
     type:Schema.Types.ObjectId,
     ref:Diagnostic_params,
-    required:false
+    required:false,
   },
   id_state:{
     type:Schema.Types.ObjectId,
     ref:State,
-    required:true
+    required:false,
   },
-  name:{
-    type:String,
-    required:true
+  results:[Number],
+  name:String,
+  description:String,
+  diagnostic:String,
+  creation_date: {
+    type: Date,
+    default: Date.now(),
   },
-  description:{
-    type:String,
+  update_date: Date,
+  updated:{
+    type:Boolean,
+    default:false,
     required:false
-  },
-  results:{
-    type:Array,
-    required:false
-  },
-  diagnostic: {
-    type: String,
-    required: true,
   }
 });
 
-module.exports = mongoose.model('Diagnostic', DiagnosticSchema);
+export default model('Diagnostic', DiagnosticSchema);

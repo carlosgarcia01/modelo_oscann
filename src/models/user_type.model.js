@@ -9,25 +9,21 @@ const userTypeSchema = new Schema({
   id_state: { 
     type: Schema.Types.ObjectId, 
     ref: State, 
-    required: true 
-    },
-  name:{
-    type: String,
-    required: true,
+    required: false 
   },
-  description:{
-    type: String,
-    required: false,
-  },
+  name:String,
+  description:String,
   creation_date: {
     type: Date,
     default: Date.now(),
-    required: true,
-  },
-  update_date: {
-    type: Date,
     required: false,
   },
+  update_date: Date,
+  updated:{
+    type:Boolean,
+    default:false,
+    required:false
+  }
 })
 
 export default model('UserType', userTypeSchema);
