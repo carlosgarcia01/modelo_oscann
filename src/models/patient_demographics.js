@@ -7,6 +7,11 @@ const PatientDemographicSchema = new Schema({
   last_name: String,
   date_of_birth: Date,
   gender: String,
+  address: String,
+  personal_number: String,
+  emergency_name: String,
+  emergency_number: String,
+  update_date: Date,
   id_PatientDemographic: {
     type: String,
     required:true,
@@ -26,17 +31,12 @@ const PatientDemographicSchema = new Schema({
     unique:true,
     required:false,
   },
-  address: String,
-  personal_number: String,
-  emergency_name: String,
-  emergency_number: String,
   creation_date: {
     type: Date,
     default: new Date.now(),
     required:true,
 
   },
-  update_date: Date
 });
 
 export default model('PatientDemographic', PatientDemographicSchema);

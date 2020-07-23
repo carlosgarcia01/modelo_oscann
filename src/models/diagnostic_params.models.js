@@ -7,6 +7,7 @@ const DiagnosticParamsSchema = new Schema({
   name: String,
   description: String,
   conclusion: String,
+  update_date: Date,
   id_type_result: {
     type: Schema.Types.ObjectId, 
     ref: TypeResult, 
@@ -26,7 +27,6 @@ const DiagnosticParamsSchema = new Schema({
     type: Date,
     default: new Date.now(),
   },
-  update_date: Date,
   updated:{
     type:Boolean,
     default:false,

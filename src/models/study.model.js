@@ -5,8 +5,19 @@ import StudyCatalog from './study_catalog.model';
 import ReasonCancellation from './reason_cancellation.model';
 
 const StudySchema = new Schema({
-  id_local: String,
-  id_global: String,
+  update_date: Date,
+  medical_appointment_date:Date,
+  description: String,
+  id_local: {
+    type: String,
+    required: true,
+    unique: true,
+  },
+  id_global: {
+    type: String,
+    required: true,
+    unique: true,
+  },
   id_study_catalog: {
     type: Schema.Types.ObjectId,
     ref: StudyCatalog,
@@ -15,14 +26,13 @@ const StudySchema = new Schema({
   id_user: {
     type: Schema.Types.ObjectId,
     ref: User,
-    required: false,
+    required: true,
   },
   id_state: {
     type: Schema.Types.ObjectId,
     ref: State,
     required: false,
   },
-  description: String,
   series:[{
     id_calibration:{type:String,required:true},
     series:[String]
@@ -40,8 +50,6 @@ const StudySchema = new Schema({
       required:false,
     },
   },
-  update_date: Date,
-  medical_appointment:Date,
   updated:{
     type:Boolean,
     default:false,

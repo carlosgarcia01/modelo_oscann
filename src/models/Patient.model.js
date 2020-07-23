@@ -6,6 +6,7 @@ import Hospital from './hospital.model';
 
 const PatientSchema = new Schema({
   ids_patient_local:[String],
+  update_date: Date,
   id_local_patient: {
     type: String,
     required:true,
@@ -38,8 +39,7 @@ const PatientSchema = new Schema({
     type: Date,
     default: new Date.now(),
     required:true,
-  },
-  update_date: Date,
+  },  
   updated:{
     type:Boolean,
     default:false,

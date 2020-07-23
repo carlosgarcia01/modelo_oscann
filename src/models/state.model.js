@@ -3,15 +3,11 @@ import { Schema, model } from "mongoose";
 const StateSchema = new Schema({
   name:String,
   description:String,
-  id_state: {
-    type: String,
-    required: true,
-  },
+  update_date: Date,
   creation_date: {
     type: Date,
     default: new Date.now(),
   },
-  update_date: Date,
 })
 
 export default model('State', StateSchema);

@@ -6,6 +6,7 @@ const OscannUidSchema = new Schema({
   name: String,
   instalation_date: Date,
   version: String,
+  update_date: Date,
   uid_oscann:{
     type: String,
     required: true,
@@ -25,7 +26,6 @@ const OscannUidSchema = new Schema({
     default: Date.now(),
     required: true,
   },
-  update_date: Date,
   updated:{
     type:Boolean,
     default:false,

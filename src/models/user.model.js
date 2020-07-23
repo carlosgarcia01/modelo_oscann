@@ -4,10 +4,12 @@ import Hospital from './hospital.model';
 import UserType from './user_type.model';
 
 const UserSchema = new Schema({
-  id_user:{
-    type: String,
-    required: true,
-  },
+  
+  name: String,
+  password: String,
+  contact_number: String,
+  last_login_date: Date,
+  update_date: Date,
   id_user_type: {
     type: Schema.Types.ObjectId,
     ref: UserType,
@@ -23,21 +25,16 @@ const UserSchema = new Schema({
     ref: State,
     required: false,
   },
-  name: String,
   email: {
     type: String,
     required: true,
     unique: true,
   },
-  password: String,
-  contact_number: String,
-  last_login_date: Date,
   creation_date: {
     type: Date,
     required: true,
     default: new Date.now(),
   },
-  update_date: Date,
   updated:{
     type:Boolean,
     default:false,

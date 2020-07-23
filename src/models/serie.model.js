@@ -6,6 +6,26 @@ import Study from './study.model';
 import State from './state.model';
 
 const SerieSchema = new Schema({
+  update_date:Date ,
+  completion_date:Date,
+  finish_time:Date,
+  duration: Number,
+  video: String,
+  observation:String,
+  valid: String,
+  blinks: String,
+  gazy_rawx: String,
+  gazy_rawy: String,
+  pupilArea: String,
+  errory: String,
+  errorx: String,
+  gazxBey: String,
+  gazxBeX: String,
+  stimuluy: String,
+  stimulux: String,
+  gazy: String,
+  gazx:String ,
+  time: String,
   id_global_serie: {
     type: String,
     required: true
@@ -45,8 +65,6 @@ const SerieSchema = new Schema({
     default: new Date.now(),
     required:false,
   },
-  update_date:Date ,
-  completion_date:Date,
   start_time_serie: {
     type:Date,
     default: new Date.now(),
@@ -57,24 +75,6 @@ const SerieSchema = new Schema({
     default:false,
     required:false
   },
-  finish_time:Date,
-  duration: Number,
-  video: String,
-  observation:String,
-  valid: String,
-  blinks: String,
-  gazy_rawx: String,
-  gazy_rawy: String,
-  pupilArea: String,
-  errory: String,
-  errorx: String,
-  gazxBey: String,
-  gazxBeX: String,
-  stimuluy: String,
-  stimulux: String,
-  gazy: String,
-  gazx:String ,
-  time: String
 })
 
 export default model('Serie', SerieSchema);

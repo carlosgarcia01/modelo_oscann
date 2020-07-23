@@ -4,6 +4,8 @@ import State from "./state.model";
 import User from "./user.model";
 
 const LogSchema = new Schema({
+  description: String,
+  update_date:Date,
   id_process:{
     type:Schema.Types.ObjectId,
     ref:Process,
@@ -19,13 +21,11 @@ const LogSchema = new Schema({
     ref:User,
     required:false
   },
-  description: String,
   creation_date: {
     type:String,
     default:new Date.now(),
     required:false,
-  },
-  update_date:Date,
+  },  
   updated:{
     type:Boolean,
     default:false,

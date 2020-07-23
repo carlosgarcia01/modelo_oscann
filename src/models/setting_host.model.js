@@ -9,6 +9,7 @@ const SettingHostSchema = new Schema({
   port_mac: String,
   port: String,
   uri: String,
+  public_ip:String,
   departament: String,
   root_path_file:String,
   limited_upper:Number,
@@ -16,6 +17,7 @@ const SettingHostSchema = new Schema({
   available_capacity:Number,
   storage_available:Number,
   delete_concurrency:Number,
+  update_date: Date,
   deleted_date:Date,
   id_computer_ae:{
     type: String,
@@ -45,7 +47,6 @@ const SettingHostSchema = new Schema({
     type: Date,
     default: new Date.now(),
   },
-  update_date: Date,
   updated:{
     type:Boolean,
     default:false,

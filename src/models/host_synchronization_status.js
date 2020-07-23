@@ -1,10 +1,10 @@
 import { Schema, model } from "mongoose";
 import Hospital from './hospital.model';
 import State from './state.model';
-import SynchronizeObject  from "./synchronize_object.model";
 import SettingHost  from "./setting_host.model";
 
 const SyncHostStateSchema = new Schema({
+  update_date: Date,  
   id_hospital: {
     type: Schema.Types.ObjectId,
     ref: Hospital,
@@ -20,16 +20,11 @@ const SyncHostStateSchema = new Schema({
     ref:SettingHost,
     required:false,
   },
-  synchronize_objects:[{
-    type: Schema.Types.ObjectId,
-    ref: SynchronizeObject,
-    required: false
-  }],
+
   creation_date: {
     type: Date,
     default: new Date.now(),
   },
-  update_date: Date,
   updated:{
     type:Boolean,
     default:false,
