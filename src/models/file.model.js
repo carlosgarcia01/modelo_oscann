@@ -5,6 +5,9 @@ import OscannUid from "./oscann_uid.model";
 import State from "./state.model";
 
 const FileSchema = new Schema({
+  protect_file: Boolean,
+  exist:Boolean,
+  update_date: Date,
   id_serie:{
     type: Schema.Types.ObjectId,
     ref: Serie, 
@@ -25,17 +28,14 @@ const FileSchema = new Schema({
     ref: State, 
     required: true 
   },
-  protect_file: Boolean,
-  exist:Boolean,
   url_file_path:{
     type:String,
-    required:true
+    required:false
   },
   creation_date: {
     type: Date,
     default: Date.now(),
   },
-  update_date: Date,
   updated:{
     type:Boolean,
     default:false,

@@ -3,6 +3,9 @@ import User from './user.model';
 import State from './state.model';
 
 const OscannUidSchema = new Schema({
+  name: String,
+  instalation_date: Date,
+  version: String,
   uid_oscann:{
     type: String,
     required: true,
@@ -17,9 +20,6 @@ const OscannUidSchema = new Schema({
     ref: State, 
     required: false, 
   },
-  name: String,
-  instalation_date: Date,
-  version: String,
   creation_date: {
     type: Date,
     default: Date.now(),

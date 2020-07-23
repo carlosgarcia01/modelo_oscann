@@ -37,7 +37,7 @@ const SerieSchema = new Schema({
   },
   serie:{
     type:Boolean,
-    default:false,
+    default:true,
     required:false,
   },
   creation_date: {
@@ -47,7 +47,7 @@ const SerieSchema = new Schema({
   },
   update_date:Date ,
   completion_date:Date,
-  start_time: {
+  start_time_serie: {
     type:Date,
     default: new Date.now(),
     required:false,

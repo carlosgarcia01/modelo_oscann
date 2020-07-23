@@ -4,7 +4,11 @@ import OscannUid from './oscann_uid.model';
 import User from './user.model';
 
 const StudyCatalogSchema = new Schema({
-  id: String,
+  id__catalog_study: String,
+  name: String,
+  description: String,
+  duration: Number,
+  diagnostic:Boolean,
   series:{
     type:Array,
     required:true
@@ -19,22 +23,17 @@ const StudyCatalogSchema = new Schema({
     ref:State,
     required:false
   },
-  name: String,
-  description: String,
-  duration: Number,
   creation_date: {
     type:Date,
     default: new Date.now(),
     required:false
   },
   update_date: Date,
-  retired: Number,
-  retired_by:{
+  id_user:{
     type:Schema.Types.ObjectId,
     ref:User,
     required: false,
   },
-  diagnostic:Boolean,
   updated:{
     type:Boolean,
     default:false,

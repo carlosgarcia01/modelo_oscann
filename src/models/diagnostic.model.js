@@ -5,6 +5,11 @@ import Result_type from './result_type.model';
 import State from './state.model';
 
 const DiagnosticSchema = new Schema({
+  name:String,
+  results:[Number],
+  diagnostic:String,
+  description:String,
+  update_date: Date,
   id_global_diagnostic:{
     type:String,
     required:true,
@@ -26,15 +31,10 @@ const DiagnosticSchema = new Schema({
     type:Schema.Types.ObjectId,
     ref:State,
   },
-  results:[Number],
-  name:String,
-  description:String,
-  diagnostic:String,
   creation_date: {
     type: Date,
     default: Date.now(),
   },
-  update_date: Date,
   updated:{
     type:Boolean,
     default:false,

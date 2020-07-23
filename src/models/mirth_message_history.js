@@ -5,10 +5,8 @@ import Patient from "./Patient.model";
 import Study from "./study.model";
 
 const MirthMessageHistorySchema = new Schema({
-    id_wml:{
-    type: String,
-    required: true,
-  },
+  update_date: Date,
+  Data_Mirth_Message:{},
   id_hospital: {
     type: Schema.Types.ObjectId, 
     ref: Hospital, 
@@ -29,14 +27,11 @@ const MirthMessageHistorySchema = new Schema({
     ref: State, 
     required: false, 
   },
-  name: String,
   creation_date: {
     type: Date,
     default: Date.now(),
     required: true,
   },
-  update_date: Date,
-  Data_Mirth_Message:{},
   updated:{
     type:Boolean,
     default:false,
@@ -44,4 +39,4 @@ const MirthMessageHistorySchema = new Schema({
   }
 })
 
-export default model('WMLHistory', MirthMessageHistorySchema);
+export default model('MirthHistory', MirthMessageHistorySchema);

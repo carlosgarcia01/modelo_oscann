@@ -4,6 +4,17 @@ import OscannUid  from "./oscann_uid.model";
 import State  from "./state.model";
 
 const HospitalSchema = new Schema({
+  name: String,
+  address: String,
+  telephone: String,
+  postal_code: String,
+  description: String,
+  country: String,
+  city: String,
+  province: String,
+  latitude: String,
+  longitude: String,
+  update_date: Date,
   id_hospital:{
     type: String,
     required: true,
@@ -23,21 +34,10 @@ const HospitalSchema = new Schema({
     ref: State, 
     required: false,
   },
-  name: String,
-  address: String,
-  telephone: String,
-  postal_code: String,
-  description: String,
-  country: String,
-  city: String,
-  province: String,
-  latitude: String,
-  length: String,
   creation_date: {
     type: Date,
     default: Date.now(),
   },
-  update_date: Date,
   updated:{
     type:Boolean,
     default:false,

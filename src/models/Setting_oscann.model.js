@@ -1,20 +1,23 @@
 import { Schema, model } from "mongoose";
 import State from './state.model';
+import OscannUid from './oscann_uid.model';
 
 const SettingOscannSchema = new Schema({
-  uid_oscann:String,
+  resolution:String,
+  distance:String,
+  width:String,
+  subject:String,
+  lib_tracker:String,
+  crtime:String,
+  uid_oscann:{
+    type: Schema.Types.ObjectId,
+    ref:OscannUid,
+  },
   id_state:{
     type:Schema.Types.ObjectId,
     ref:State,
     required:false,
   },
-  resolution:String,
-  distance:String,
-  width:String,
-  subject:String,
-  uid_oscann:String,
-  lib_tracker:String,
-  crtime:String,
   updated:{
     type:Boolean,
     default:false,

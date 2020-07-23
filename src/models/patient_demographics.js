@@ -3,6 +3,10 @@ import State from './state.model';
 import Hospital from './hospital.model'
 
 const PatientDemographicSchema = new Schema({
+  name: String,
+  last_name: String,
+  date_of_birth: Date,
+  gender: String,
   id_PatientDemographic: {
     type: String,
     required:true,
@@ -16,13 +20,6 @@ const PatientDemographicSchema = new Schema({
     type: Schema.Types.id_state,
     ref: State,
     required: false,
-  },
-  name: String,
-  last_name: String,
-  date_of_birth: Date,
-  gender: {
-    type: String,
-    maxlength: 1,
   },
   email: {
     type: String,

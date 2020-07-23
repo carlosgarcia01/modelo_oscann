@@ -2,6 +2,9 @@ import { Schema, model } from "mongoose";
 import State from './state.model';
 
 const HospitalGroupSchema = new Schema({
+  name: String,
+  description: String,
+  update_date: Date,
   id_hospital_group: {
     type: String,
     required: true,
@@ -11,13 +14,10 @@ const HospitalGroupSchema = new Schema({
     ref: State, 
     required: false, 
   },
-  name: String,
-  description: String,
   creation_date: {
     type: Date,
     default: Date.now(),
   },
-  update_date: Date,
   updated:{
     type:Boolean,
     default:false,

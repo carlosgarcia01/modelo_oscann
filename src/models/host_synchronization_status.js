@@ -4,7 +4,7 @@ import State from './state.model';
 import SynchronizeObject  from "./synchronize_object.model";
 import SettingHost  from "./setting_host.model";
 
-const SyncObjectSchema = new Schema({
+const SyncHostStateSchema = new Schema({
   id_hospital: {
     type: Schema.Types.ObjectId,
     ref: Hospital,
@@ -37,4 +37,4 @@ const SyncObjectSchema = new Schema({
   }
 })
 
-export default model('SyncObject', SyncObjectSchema);
+export default model('SyncHostState', SyncHostStateSchema);

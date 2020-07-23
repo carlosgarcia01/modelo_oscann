@@ -5,6 +5,7 @@ import State from './state.model';
 import Hospital from './hospital.model';
 
 const PatientSchema = new Schema({
+  ids_patient_local:[String],
   id_local_patient: {
     type: String,
     required:true,
@@ -28,7 +29,6 @@ const PatientSchema = new Schema({
     ref:State,
     required:false,
   },
-  ids_patient_local:[String],
   id_hospital: {
     type: Schema.Types.ObjectId,
     ref: Hospital,
@@ -38,7 +38,6 @@ const PatientSchema = new Schema({
     type: Date,
     default: new Date.now(),
     required:true,
-
   },
   update_date: Date,
   updated:{
@@ -48,4 +47,4 @@ const PatientSchema = new Schema({
   }
 });
 
-export default model('Patient', patientSchema);
+export default model('Patient', PatientSchema);

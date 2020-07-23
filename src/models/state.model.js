@@ -1,12 +1,12 @@
 import { Schema, model } from "mongoose";
 
 const StateSchema = new Schema({
+  name:String,
+  description:String,
   id_state: {
     type: String,
     required: true,
   },
-  name:String,
-  description:String,
   creation_date: {
     type: Date,
     default: new Date.now(),
