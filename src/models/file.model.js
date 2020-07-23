@@ -10,22 +10,22 @@ const FileSchema = new Schema({
   update_date: Date,
   id_serie:{
     type: Schema.Types.ObjectId,
-    ref: Serie, 
+    ref: 'Serie', 
     required: false, 
   },
   id_patient:{
     type: Schema.Types.ObjectId, 
-    ref: Patient, 
+    ref: 'Patient', 
     required: false, 
   },
   id_oscann_uid:{
     type: Schema.Types.ObjectId, 
-    ref: OscannUid, 
+    ref: 'OscannUid', 
     required: false, 
   },
   id_state: { 
     type: Schema.Types.ObjectId, 
-    ref: State, 
+    ref: 'State', 
     required: true 
   },
   url_file_path:{

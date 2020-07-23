@@ -6,7 +6,7 @@ const StateSchema = new Schema({
   update_date: Date,
   creation_date: {
     type: Date,
-    default: new Date.now(),
+    default: Date.now(),
   },
 })
 

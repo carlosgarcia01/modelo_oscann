@@ -13,27 +13,27 @@ const SerieCatalogSchema = new Schema({
   update_date: Date,
   id_study_catalog: {
     type: Schema.Types.ObjectId,
-    ref: StudyCatalog,
+    ref: 'StudyCatalog',
     required: false,
   },
   uid_oscann: {
     type:Schema.Types.ObjectId,
-    ref:OscannUid,
+    ref:'OscannUid',
     required:false
   },
   id_state:{
     type:Schema.Types.ObjectId,
-    ref:State,
+    ref:'State',
     required: false,
   } ,
   retired_by:{
     type:Schema.Types.ObjectId,
-    ref:User,
+    ref:'User',
     required: false,
   },
   creation_date: {
     type:Date,
-    default: new Date.now(),
+    default: Date.now(),
   },
   updated:{
     type:Boolean,

@@ -32,27 +32,27 @@ const SerieSchema = new Schema({
   },
   id_user: {
     type: Schema.Types.ObjectId,
-    ref: User,
+    ref: 'User',
     required: false 
   } ,
   id_serie_catalog: {
     type: Schema.Types.ObjectId,
-    ref: Serie_catalog,
+    ref: 'Serie_catalog',
     required: false 
   },
   id_oscann: {
     type: Schema.Types.ObjectId,
-    ref: Oscann, 
+    ref: 'Oscann', 
     required: false 
   },
   id_study: {
     type:Schema.Types.ObjectId,
-    ref:Study,
+    ref:'Study',
     required:false 
   },
   id_state:{
     type:Schema.Types.ObjectId,
-    ref:State,
+    ref:'State',
     required:false 
   },
   serie:{
@@ -62,12 +62,12 @@ const SerieSchema = new Schema({
   },
   creation_date: {
     type: Date,
-    default: new Date.now(),
+    default: Date.now(),
     required:false,
   },
   start_time_serie: {
     type:Date,
-    default: new Date.now(),
+    default: Date.now(),
     required:false,
   },
   updated:{

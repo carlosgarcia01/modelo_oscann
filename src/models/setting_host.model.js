@@ -24,28 +24,28 @@ const SettingHostSchema = new Schema({
     required: true,
   },
   id_hospital:{
-    type: Schema.Types.id_hospital, 
-    ref: Hospital, 
+    type: Schema.Types.ObjectId, 
+    ref: 'Hospital', 
     required: false, 
   },
   id_user:{
-    type: Schema.Types.id_user, 
-    ref: User, 
+    type: Schema.Types.ObjectId, 
+    ref: 'User', 
     required: false ,
   },
   id_state: { 
-    type: Schema.Types.id_state, 
-    ref: State, 
+    type: Schema.Types.ObjectId, 
+    ref: 'State', 
     required: false 
   },
   id_oscann:{
-    type: Schema.Types.id_oscann, 
-    ref: OscannUid, 
+    type: Schema.Types.ObjectId, 
+    ref: 'OscannUid', 
     required: false 
   },
   creation_date: {
     type: Date,
-    default: new Date.now(),
+    default: Date.now(),
   },
   updated:{
     type:Boolean,

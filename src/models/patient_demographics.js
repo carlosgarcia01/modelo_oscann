@@ -18,12 +18,12 @@ const PatientDemographicSchema = new Schema({
   },
   id_hospital: {
     type: Schema.Types.ObjectId,
-    ref: Hospital,
+    ref: 'Hospital',
     required: false,
   },
   id_state: {
-    type: Schema.Types.id_state,
-    ref: State,
+    type: Schema.Types.ObjectId,
+    ref: 'State',
     required: false,
   },
   email: {
@@ -33,7 +33,7 @@ const PatientDemographicSchema = new Schema({
   },
   creation_date: {
     type: Date,
-    default: new Date.now(),
+    default: Date.now(),
     required:true,
 
   },

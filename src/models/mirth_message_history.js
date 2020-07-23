@@ -9,22 +9,22 @@ const MirthMessageHistorySchema = new Schema({
   Data_Mirth_Message:{},
   id_hospital: {
     type: Schema.Types.ObjectId, 
-    ref: Hospital, 
+    ref: 'Hospital', 
     required: false,  
   },
   id_patient: {
     type: Schema.Types.ObjectId, 
-    ref: Patient, 
+    ref: 'Patient', 
     required: false,  
   },
   id_study: {
     type: Schema.Types.ObjectId, 
-    ref: Study, 
+    ref: 'Study', 
     required: false,  
   },
   id_state: { 
     type: Schema.Types.ObjectId, 
-    ref: State, 
+    ref: 'State', 
     required: false, 
   },
   creation_date: {

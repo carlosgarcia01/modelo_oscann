@@ -1,12 +1,12 @@
 import mongoose from "mongoose";
-import dotenv from 'dotenv';
+/* import dotenv from 'dotenv';
 dotenv.config();
 const { MONGO_USER,MONGO_PASSWORD,MONGO_OPTIONS } = process.env;
-const db =`mongodb://${MONGO_USER}:${MONGO_PASSWORD}${MONGO_OPTIONS}`;
+const db =`mongodb://${MONGO_USER}:${MONGO_PASSWORD}${MONGO_OPTIONS}`; */
 
 export async function connect() {
   try {
-    await mongoose.connect('mongodb://localhost/mongodbgraphql', {
+    await mongoose.connect('mongodb://localhost/patient', {
       useNewUrlParser: true,
       useUnifiedTopology: true
     })

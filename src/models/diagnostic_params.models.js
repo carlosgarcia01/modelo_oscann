@@ -10,22 +10,22 @@ const DiagnosticParamsSchema = new Schema({
   update_date: Date,
   id_type_result: {
     type: Schema.Types.ObjectId, 
-    ref: TypeResult, 
+    ref: 'TypeResult', 
     required: false,
   },
   id_study_catalog: {
     type: Schema.Types.ObjectId, 
-    ref: StudyCatalog, 
+    ref: 'StudyCatalog', 
     required: false,
   },
   id_state: { 
     type: Schema.Types.ObjectId, 
-    ref: State, 
+    ref: 'State', 
     required: false, 
   },
   creation_date: {
     type: Date,
-    default: new Date.now(),
+    default: Date.now(),
   },
   updated:{
     type:Boolean,

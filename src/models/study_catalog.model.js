@@ -13,32 +13,32 @@ const StudyCatalogSchema = new Schema({
   retired:Number,
   series:[{
     type:Schema.Types.ObjectId,
-    ref:Serie,
+    ref:'Serie',
     required:true
   }],
   id_oscann_uid: {
     type:Schema.Types.ObjectId,
-    ref:OscannUid,
+    ref:'OscannUid',
     required:false
   },
   id_state:{
     type:Schema.Types.ObjectId,
-    ref:State,
+    ref:'State',
     required:false
   },
   creation_date: {
     type:Date,
-    default: new Date.now(),
+    default: Date.now(),
     required:false
   },
   id_user:{
     type:Schema.Types.ObjectId,
-    ref:User,
+    ref:'User',
     required: false,
   },
   retired_by:{
     type:Schema.Types.ObjectId,
-    ref:User,
+    ref:'User',
     required: false,
   },
   updated:{

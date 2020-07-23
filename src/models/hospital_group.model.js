@@ -11,7 +11,7 @@ const HospitalGroupSchema = new Schema({
   },
   id_state: { 
     type: Schema.Types.ObjectId, 
-    ref: State, 
+    ref: 'State', 
     required: false, 
   },
   creation_date: {

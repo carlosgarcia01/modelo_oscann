@@ -6,12 +6,12 @@ const ReasonCancellationSchema = new Schema({
   update_date: Date,
   id_state:{
     type:Schema.Types.ObjectId,
-    ref:State,
+    ref:'State',
     required:false,
   },
   creation_date:{
     type:Date,
-    default: new Date.now(),
+    default: Date.now(),
     required:true
   },
   updated:{

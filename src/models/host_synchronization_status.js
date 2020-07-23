@@ -7,23 +7,23 @@ const SyncHostStateSchema = new Schema({
   update_date: Date,  
   id_hospital: {
     type: Schema.Types.ObjectId,
-    ref: Hospital,
+    ref: 'Hospital',
     required:false,
   },
   id_state: {
     type: Schema.Types.ObjectId,
-    ref:State,
+    ref:'State',
     required:false,
   },
   id_host: {
     type: Schema.Types.ObjectId,
-    ref:SettingHost,
+    ref:'SettingHost',
     required:false,
   },
 
   creation_date: {
     type: Date,
-    default: new Date.now(),
+    default: Date.now(),
   },
   updated:{
     type:Boolean,

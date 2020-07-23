@@ -11,11 +11,11 @@ const SettingOscannSchema = new Schema({
   crtime:String,
   uid_oscann:{
     type: Schema.Types.ObjectId,
-    ref:OscannUid,
+    ref:'OscannUid',
   },
   id_state:{
     type:Schema.Types.ObjectId,
-    ref:State,
+    ref:'State',
     required:false,
   },
   updated:{

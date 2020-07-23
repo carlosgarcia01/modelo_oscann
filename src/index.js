@@ -1,24 +1,27 @@
-import express  from "express";
-import { connect } from "./dataBase";
-import dotenv from 'dotenv';
-import morgan from 'morgan';
-dotenv.config();
+import { connect }  from "./database";
+import createPatient from './controller/patient/createPatient';
 connect();
 
-app.set('port',process.env.PORT || 3000);
+async function main() {
+  try{
+      const patient = {
+      _id: "1",
+      id_global_patient: "G1",
+      ids_patient_local:[],
+      update_date: Date.now(),
+      id_estudy: ["Estudio1","Estudio2"],
+      id_PatientDemographic: "datos Paciente",
+      id_state: "Activo",
+      id_hospital: "hospital 1",
+      creation_date: Date.now(),  
+      updated:"true"
+    }
+    const savedPatient = await createPatient(patient);
+    return savedPatient; 
+  }catch(err){
+    console.log(err)
+  }
+ 
+}
 
-
-app.use(morgan('dev'));
-app.use(express.urlencoded({extended:false}));
-app.use(express.json());
-
-
-
-
-app.get('/', (req, res) =>{
-  res.json({
-    message: 'Hello World'
-  })
-});
-
-app.listen(3000, () => console.log(`server on port ${process.env.PORT}`));
+main();

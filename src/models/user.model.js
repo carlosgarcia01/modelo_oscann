@@ -12,17 +12,17 @@ const UserSchema = new Schema({
   update_date: Date,
   id_user_type: {
     type: Schema.Types.ObjectId,
-    ref: UserType,
+    ref: 'UserType',
     required: false,
   },
   id_hospital: {
     type: Schema.Types.ObjectId,
-    ref: Hospital,
+    ref: 'Hospital',
     required: true,
   },
   id_state: {
     type: Schema.Types.ObjectId, 
-    ref: State,
+    ref: 'State',
     required: false,
   },
   email: {
@@ -33,7 +33,7 @@ const UserSchema = new Schema({
   creation_date: {
     type: Date,
     required: true,
-    default: new Date.now(),
+    default: Date.now(),
   },
   updated:{
     type:Boolean,

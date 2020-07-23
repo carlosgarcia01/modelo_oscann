@@ -8,22 +8,22 @@ const LogSchema = new Schema({
   update_date:Date,
   id_process:{
     type:Schema.Types.ObjectId,
-    ref:Process,
+    ref:'Process',
     required:false
   },
   id_state:{
     type:Schema.Types.ObjectId,
-    ref:State,
+    ref:'State',
     required:false
   },
   id_user:{
     type:Schema.Types.ObjectId,
-    ref:User,
+    ref:'User',
     required:false
   },
   creation_date: {
     type:String,
-    default:new Date.now(),
+    default:Date.now(),
     required:false,
   },  
   updated:{

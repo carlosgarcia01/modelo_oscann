@@ -13,12 +13,12 @@ const OscannUidSchema = new Schema({
   },
   id_user: {
     type: Schema.Types.ObjectId, 
-    ref: User, 
+    ref: 'User', 
     required: false, 
   },
   id_state: { 
     type: Schema.Types.ObjectId, 
-    ref: State, 
+    ref: 'State', 
     required: false, 
   },
   creation_date: {

@@ -17,19 +17,19 @@ const DiagnosticSchema = new Schema({
   },
   id_study:{
     type:Schema.Types.ObjectId,
-    ref:Study,
+    ref:'Study',
   },
   id_result_type:{
     type:Schema.Types.ObjectId,
-    ref:Result_type,
+    ref:'Result_type',
   },
   id_diagnostic_params:{
     type:Schema.Types.ObjectId,
-    ref:Diagnostic_params,
+    ref:'Diagnostic_params',
   },
   id_state:{
     type:Schema.Types.ObjectId,
-    ref:State,
+    ref:'State',
   },
   creation_date: {
     type: Date,

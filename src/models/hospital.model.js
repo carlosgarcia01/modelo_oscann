@@ -20,18 +20,18 @@ const HospitalSchema = new Schema({
     required: true,
   },
   id_hospital_group: {
-    type: Schema.Types.id_hospital_group, 
-    ref: HospitalGroup, 
+    type: Schema.Types.ObjectId, 
+    ref: 'HospitalGroup', 
     required: false
   },
   id_oscann_uid:{
     type: Schema.Types.ObjectId, 
-    ref: OscannUid, 
+    ref: 'OscannUid', 
     required: false, 
   },
   id_state: { 
     type: Schema.Types.ObjectId, 
-    ref: State, 
+    ref: 'State', 
     required: false,
   },
   creation_date: {

@@ -20,17 +20,17 @@ const StudySchema = new Schema({
   },
   id_study_catalog: {
     type: Schema.Types.ObjectId,
-    ref: StudyCatalog,
+    ref: 'StudyCatalog',
     required: false,
   },
   id_user: {
     type: Schema.Types.ObjectId,
-    ref: User,
+    ref: 'User',
     required: true,
   },
   id_state: {
     type: Schema.Types.ObjectId,
-    ref: State,
+    ref: 'State',
     required: false,
   },
   series:[{
@@ -39,14 +39,14 @@ const StudySchema = new Schema({
   }],
   creation_date: {
     type: Date,
-    default: new Date.now(),
+    default: Date.now(),
     required: false
   }, 
   cancelled:{
     flat:Boolean,
     reason:{
       type: Schema.Types.ObjectId,
-      ref: ReasonCancellation,
+      ref: 'ReasonCancellation',
       required:false,
     },
   },
