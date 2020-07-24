@@ -1,7 +1,8 @@
-import Patient from '../../models/patient.model'
+import Patient from '../../models/patient.model';
 
-export const getPatients = async () => {
-  return await Patient.find();
+const getPatients = async () => {
+  const patientsReturn = await Patient.find();
+  return patientsReturn;
 };
 
-
+export default getPatients;
