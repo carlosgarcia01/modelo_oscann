@@ -1,5 +1,8 @@
-import Log from "../../models/log.model";
+import Log from '../../models/log.model';
 
-export const getLogs = async () => {
-  return await Log.find();
+const getLogs = async () => {
+  const logsReturn = await Log.find();
+  return logsReturn;
 };
+
+export default getLogs;
