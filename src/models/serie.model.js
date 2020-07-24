@@ -5,7 +5,6 @@ const SerieSchema = new Schema({
   completion_date: Date,
   finish_time: Date,
   duration: Number,
-  video: String,
   observation: String,
   valid: String,
   blinks: String,
@@ -21,9 +20,15 @@ const SerieSchema = new Schema({
   gazy: String,
   gazx: String,
   time: String,
+  id_file: {
+    type: Schema.Types.ObjectId,
+    ref: 'File',
+    required: false,
+  },
   id_global_serie: {
     type: String,
     required: true,
+    unique: true,
   },
   id_user: {
     type: Schema.Types.ObjectId,
@@ -40,17 +45,12 @@ const SerieSchema = new Schema({
     ref: 'Oscann',
     required: false,
   },
-  id_study: {
-    type: Schema.Types.ObjectId,
-    ref: 'Study',
-    required: false,
-  },
   id_state: {
     type: Schema.Types.ObjectId,
     ref: 'State',
     required: false,
   },
-  serie: {
+  is_serie: {
     type: Boolean,
     default: true,
     required: false,

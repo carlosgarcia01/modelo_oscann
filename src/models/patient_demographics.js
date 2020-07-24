@@ -3,16 +3,15 @@ import { Schema, model } from 'mongoose';
 const PatientDemographicSchema = new Schema({
   name: String,
   last_name: String,
-  date_of_birth: Date,
-  gender: String,
   address: String,
   personal_number: String,
   emergency_name: String,
   emergency_number: String,
   update_date: Date,
-  id_PatientDemographic: {
+  id_Patient_local: {
     type: String,
     required: true,
+    unique: true,
   },
   id_hospital: {
     type: Schema.Types.ObjectId,
@@ -36,4 +35,4 @@ const PatientDemographicSchema = new Schema({
   },
 });
 
-export default model('PatientDemographic', PatientDemographicSchema);
+export default model('DataPatientDemographic', PatientDemographicSchema);

@@ -3,18 +3,16 @@ import { Schema, model } from 'mongoose';
 const SerieCatalogSchema = new Schema({
   name: String,
   description: String,
-  duration: Number,
-  diagnostic: Boolean,
-  retired: Number,
+  is_diagnostic: Boolean,
   update_date: Date,
-  id_study_catalog: {
-    type: Schema.Types.ObjectId,
-    ref: 'StudyCatalog',
-    required: false,
-  },
   uid_oscann: {
     type: Schema.Types.ObjectId,
     ref: 'OscannUid',
+    required: false,
+  },
+  id_study_catalog: {
+    type: Schema.Types.ObjectId,
+    ref: 'StudyCatalog',
     required: false,
   },
   id_state: {
@@ -22,7 +20,7 @@ const SerieCatalogSchema = new Schema({
     ref: 'State',
     required: false,
   },
-  retired_by: {
+  id_user: {
     type: Schema.Types.ObjectId,
     ref: 'User',
     required: false,

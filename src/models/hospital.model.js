@@ -12,6 +12,7 @@ const HospitalSchema = new Schema({
   latitude: String,
   longitude: String,
   update_date: Date,
+  hosts_number: Number,
   id_hospital: {
     type: String,
     required: true,
