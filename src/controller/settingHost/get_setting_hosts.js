@@ -1,7 +1,7 @@
-import SettingHost from '../../models/setting_host.model'
+import SettingHost from '../../models/setting_host.model';
 
-export const getSettingHosts = async () => {
-  return await SettingHost.find();
+const getSettingHosts = async () => {
+  return SettingHost.find();
 };
 
-
+export default getSettingHosts;
