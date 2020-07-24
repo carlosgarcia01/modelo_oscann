@@ -6,7 +6,7 @@ const db =`mongodb://${MONGO_USER}:${MONGO_PASSWORD}${MONGO_OPTIONS}`; */
 
 export async function connect() {
   try {
-    await mongoose.connect('mongodb://localhost/patient', {
+    await mongoose.connect('mongodb://localhost/oscann-suit', {
       useNewUrlParser: true,
       useUnifiedTopology: true
     })
