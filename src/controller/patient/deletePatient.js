@@ -1,9 +1,11 @@
-import Patient from '../../models/patient.model'
+import Patient from '../../models/patient.model';
 
-export const deletePatient = async (id_patient) => {
-  return await Patient.findByIdAndDelete(id_patient)
+export const deletePatient = async (idPatient) => {
+  const patientDeleted = await Patient.findByIdAndDelete(idPatient);
+  return patientDeleted;
 };
 
-export const deletePatientIdGlobal = async (id_patient) => {
-  return await Patient.deleteOne({ "id_global_patient":id_patient })
+export const deletePatientIdGlobal = async (idPatient) => {
+  const patientDeleted = await Patient.deleteOne({ id_global_patient: idPatient });
+  return patientDeleted;
 };

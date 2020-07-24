@@ -1,4 +1,4 @@
-import { Schema, model } from "mongoose";
+import { Schema, model } from 'mongoose';
 
 const HospitalGroupSchema = new Schema({
   name: String,
@@ -9,20 +9,20 @@ const HospitalGroupSchema = new Schema({
     required: true,
     unique:true
   },
-  id_state: { 
-    type: Schema.Types.ObjectId, 
-    ref: 'State', 
-    required: false, 
+  id_state: {
+    type: Schema.Types.ObjectId,
+    ref: 'State',
+    required: false,
   },
   creation_date: {
     type: Date,
     default: Date.now(),
   },
-  updated:{
-    type:Boolean,
-    default:false,
-    required:false
-  }
-})
+  updated: {
+    type: Boolean,
+    default: false,
+    required: false,
+  },
+});
 
 export default model('HospitalGroup', HospitalGroupSchema);
