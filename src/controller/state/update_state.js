@@ -1,5 +1,7 @@
-import State from '../../models/state.model'
+import State from '../../models/state.model';
 
-export  const updateState = async (id, state,) => {
-  return await State.findByIdAndUpdate(id, state, { new: true });
+const updateState = async (id, state) => {
+  return State.findByIdAndUpdate(id, state, { new: true });
 };
+
+export default updateState;
