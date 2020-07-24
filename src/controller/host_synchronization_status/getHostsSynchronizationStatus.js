@@ -1,8 +1,8 @@
 import SyncHostState from '../../models/host_synchronization_status.model';
 
-const getSyncHostsStates = async () => {
+const getHostsSynchronizationStatus = async () => {
   const logsReturn = await SyncHostState.find();
   return logsReturn;
 };
 
-export default getSyncHostsStates;
+export default getHostsSynchronizationStatus;
