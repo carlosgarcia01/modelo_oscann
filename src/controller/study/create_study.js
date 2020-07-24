@@ -1,7 +1,8 @@
-import Study from "../../models/study.model";
+import Study from '../../models/study.model';
 
-export const createStudy = async (study) => {
+const createStudy = async (study) => {
   const newStudy = new Study(study);
-  return  await newStudy.save();;
+  return newStudy.save();
 };
 
+export default createStudy;

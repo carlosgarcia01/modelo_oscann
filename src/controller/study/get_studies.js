@@ -1,7 +1,7 @@
-import Study from '../../models/study.model'
+import Study from '../../models/study.model';
 
-export const getStudies = async () => {
-  return await Study.find();
+const getStudies = async () => {
+  return Study.find();
 };
 
-
+export default getStudies;

@@ -1,13 +1,13 @@
-import Study from '../../models/study.model'
+import Study from '../../models/study.model';
 
 export const deleteStudy = async (id) => {
-  return await Study.findByIdAndDelete(id)
+  return Study.findByIdAndDelete(id);
 };
 
-export const deleteStudyIdLocal = async (id_study_local) => {
-  return await Study.deleteOne({ "id_local":id_study_local })
+export const deleteStudyIdLocal = async (idStudyLocal) => {
+  return Study.deleteOne({ id_local: idStudyLocal });
 };
 
-export const deleteStudyIdGlobal = async (id_study_global) => {
-  return await Study.deleteOne({ "id_global":id_study_global })
+export const deleteStudyIdGlobal = async (idStudyGlobal) => {
+  return Study.deleteOne({ id_global: idStudyGlobal });
 };
