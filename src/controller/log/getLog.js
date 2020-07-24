@@ -1,6 +1,8 @@
-import Log from "../../models/log.model";
+import Log from '../../models/log.model';
 
-export const getLogById = async (id) => {
+const getLogById = async (id) => {
   const logReturn = await Log.findById(id);
   return logReturn;
 };
+
+export default getLogById;
