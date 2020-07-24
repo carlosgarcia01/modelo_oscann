@@ -1,8 +1,7 @@
-import HospitalGroup from "../../models/hospital_group.model";
+import HospitalGroup from '../../models/hospital_group.model';
 
-
-export const getHospitalGroups = async () => {
-  return await HospitalGroup.find();
+const getHospitalGroups = async () => {
+  return HospitalGroup.find();
 };
 
-
+export default getHospitalGroups;

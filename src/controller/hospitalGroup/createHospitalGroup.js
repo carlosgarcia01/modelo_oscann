@@ -1,7 +1,9 @@
-import HospitalGroup from "../../models/hospital_group.model";
+import HospitalGroup from '../../models/hospital_group.model';
 
-export const createHospitalGroup = async (hospital_group) => {
-  const newHospitalGroup = new HospitalGroup(hospital_group);
+const createHospitalGroup = async (hospitalGroup) => {
+  const newHospitalGroup = new HospitalGroup(hospitalGroup);
   const HospitalGroupReturn = await newHospitalGroup.save();
   return HospitalGroupReturn;
 };
+
+export default createHospitalGroup;

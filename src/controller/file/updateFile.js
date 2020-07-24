@@ -1,5 +1,6 @@
-import File from "../../models/file.model";
+import File from '../../models/file.model';
 
-export  const updateFile = async (id, file,) => {
-  return await File.findByIdAndUpdate(id, file, { new: true });
+const updateFile = async (id, file) => {
+  return File.findByIdAndUpdate(id, file, { new: true });
 };
+export default updateFile;

@@ -4,12 +4,12 @@ const SettingOscannSchema = new Schema({
   resolution: String,
   distance: String,
   width: String,
-  subject: String,
   lib_tracker: String,
   crtime: String,
-  uid_oscann: {
+  id_user: {
     type: Schema.Types.ObjectId,
-    ref: 'OscannUid',
+    ref: 'User',
+    required: false,
   },
   id_state: {
     type: Schema.Types.ObjectId,

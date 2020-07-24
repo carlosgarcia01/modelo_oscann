@@ -1,7 +1,7 @@
 import Diagnostic from '../../models/diagnostic.model';
 
-export const getDiagnostics = async () => {
-  return await Diagnostic.find();
+const getDiagnostics = async () => {
+  return Diagnostic.find();
 };
 
-
+export default getDiagnostics;

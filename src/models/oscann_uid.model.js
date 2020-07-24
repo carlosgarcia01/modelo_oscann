@@ -8,10 +8,16 @@ const OscannUidSchema = new Schema({
   uid_oscann: {
     type: String,
     required: true,
+    unique: true,
   },
   id_user: {
     type: Schema.Types.ObjectId,
     ref: 'User',
+    required: false,
+  },
+  id_setting_oscann: {
+    type: Schema.Types.ObjectId,
+    ref: 'SettingOscann',
     required: false,
   },
   id_state: {

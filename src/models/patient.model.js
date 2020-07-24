@@ -1,11 +1,14 @@
 import { Schema, model } from 'mongoose';
 
 const PatientSchema = new Schema({
+  update_date: Date,
+  date_of_birth: Date,
+  gender: String,
   id_global_patient: {
     type: String,
     required: true,
+    unique: true,
   },
-  update_date: Date,
   id_local_patient: {
     type: String,
     required: true,
@@ -18,11 +21,6 @@ const PatientSchema = new Schema({
       required: false,
     },
   ],
-  id_PatientDemographic: {
-    type: Schema.Types.ObjectId,
-    ref: 'PatientDemographic',
-    required: false,
-  },
   id_state: {
     type: Schema.Types.ObjectId,
     ref: 'State',

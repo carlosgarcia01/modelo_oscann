@@ -1,7 +1,8 @@
-import File from "../../models/file.model";
+import File from '../../models/file.model';
 
-export const getFileById = async (id_file) => {
-  const FileReturn = await File.findById(id_file);
+const getFileById = async (idFile) => {
+  const FileReturn = await File.findById(idFile);
   return FileReturn;
 };
 
+export default getFileById;

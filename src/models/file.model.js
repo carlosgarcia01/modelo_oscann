@@ -4,11 +4,6 @@ const FileSchema = new Schema({
   protect_file: Boolean,
   exist: Boolean,
   update_date: Date,
-  id_serie: {
-    type: Schema.Types.ObjectId,
-    ref: 'Serie',
-    required: false,
-  },
   id_patient: {
     type: Schema.Types.ObjectId,
     ref: 'Patient',
