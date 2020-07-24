@@ -29,10 +29,20 @@ const StudySchema = new Schema({
     ref: 'State',
     required: false,
   },
+  id_host: {
+    type: Schema.Types.ObjectId,
+    ref: 'SettingHost',
+    required: false,
+  },
   series: [
     {
       id_calibration: { type: String, required: true },
-      series: [String],
+      series: [
+        {
+          type: Schema.Types.ObjectId,
+          ref: 'Serie',
+        },
+      ],
     },
   ],
   creation_date: {

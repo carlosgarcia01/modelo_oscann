@@ -1,7 +1,8 @@
-import DiagnosticParams from '../../models/diagnostic_params.model'
+import DiagnosticParams from '../../models/diagnostic_params.model';
 
-export const getDiagnosticParamsById = async (id_diagnosticParams) => {
-  const DiagnosticParamsReturn = await DiagnosticParams.findById(id_diagnosticParams);
+const getDiagnosticParamsById = async (idDiagnosticParams) => {
+  const DiagnosticParamsReturn = await DiagnosticParams.findById(idDiagnosticParams);
   return DiagnosticParamsReturn;
 };
 
+export default getDiagnosticParamsById;

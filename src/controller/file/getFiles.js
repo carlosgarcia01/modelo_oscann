@@ -1,7 +1,7 @@
-import File from "../../models/file.model";
+import File from '../../models/file.model';
 
-export const getFiles = async () => {
-  return await File.find();
+const getFiles = async () => {
+  return File.find();
 };
 
-
+export default getFiles;

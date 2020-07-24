@@ -1,11 +1,11 @@
-import Hospital from "../../models/hospital.model";
+import Hospital from '../../models/hospital.model';
 
-export const getHospitalById = async (id_hospital) => {
-  const HospitalReturn = await Hospital.findById(id_hospital);
+export const getHospitalById = async (idHospital) => {
+  const HospitalReturn = await Hospital.findById(idHospital);
   return HospitalReturn;
 };
 
-export const getHospitalIdGlobal = async (id_hospital) => {
-  const HospitalReturn = await Hospital.findOne({ "id_hospital":id_hospital });
+export const getHospitalIdGlobal = async (idHospital) => {
+  const HospitalReturn = await Hospital.findOne({ id_hospital: idHospital });
   return HospitalReturn;
 };

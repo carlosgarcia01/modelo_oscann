@@ -1,9 +1,9 @@
-import Hospital from "../../models/hospital.model";
+import Hospital from '../../models/hospital.model';
 
-export const deleteHospital = async (id_hospital) => {
-  return await Hospital.findByIdAndDelete(id_hospital)
+export const deleteHospital = async (idDospital) => {
+  return Hospital.findByIdAndDelete(idDospital);
 };
 
-export const deleteHospitalIdGlobal = async (id_hospital) => {
-  return await Hospital.deleteOne({ "id_hospital":id_hospital })
+export const deleteHospitalIdGlobal = async (idDospital) => {
+  return Hospital.deleteOne({ id_hospital: idDospital });
 };

@@ -4,7 +4,6 @@ const SettingHostSchema = new Schema({
   host_name: String,
   port_mac: String,
   port: String,
-  uri: String,
   public_ip: String,
   departament: String,
   root_path_file: String,
@@ -15,7 +14,7 @@ const SettingHostSchema = new Schema({
   delete_concurrency: Number,
   update_date: Date,
   deleted_date: Date,
-  id_computer_ae: {
+  id_host: {
     type: String,
     required: true,
   },
