@@ -1,4 +1,4 @@
-import Patient from "../../models/patient.model";
+import Patient from '../../models/patient.model';
 
 const createPatient = async (patient) => {
   const newPatient = new Patient(patient);

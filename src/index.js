@@ -1,5 +1,6 @@
 import { connect } from "./database";
 import createPatient from "./controller/patient/createPatient";
+
 connect();
 
 async function main() {
