@@ -1,16 +1,16 @@
 import { connect } from "./database";
-import createPatient from "./controller/patient/createPatient";
+import { updateUserType } from "./controller/user_type/updateUserType";
 
 connect();
 
 async function main() {
     try {
-        const patient = {
-            id_global_patient: "G1",
-            id_local_patient: "id_local_patient",
+        const userType = {
+            name: "Admin",
         };
-        const savedPatient = await createPatient(patient);
-        return savedPatient;
+        const savedUserType = await updateUserType("5f1b1268449ba036e83ae44b", userType);
+        console.log(savedUserType);
+        return savedUserType;
     } catch (err) {
         console.log(err);
     }
