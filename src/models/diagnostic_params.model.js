@@ -28,7 +28,7 @@ const DiagnosticParamsSchema = new Schema({
     type: Boolean,
     default: false,
     required: false,
-  }
+  },
 });
 
 export default model('DiagnosticParams', DiagnosticParamsSchema);

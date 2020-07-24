@@ -7,7 +7,7 @@ const HospitalGroupSchema = new Schema({
   id_hospital_group: {
     type: String,
     required: true,
-    unique:true
+    unique: true,
   },
   id_state: {
     type: Schema.Types.ObjectId,
