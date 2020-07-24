@@ -1,6 +1,4 @@
-import { Schema, model } from "mongoose";
-import State from './state.model';
-import Hospital from './hospital.model'
+import { Schema, model } from 'mongoose';
 
 const PatientDemographicSchema = new Schema({
   name: String,
@@ -14,7 +12,7 @@ const PatientDemographicSchema = new Schema({
   update_date: Date,
   id_PatientDemographic: {
     type: String,
-    required:true,
+    required: true,
   },
   id_hospital: {
     type: Schema.Types.ObjectId,
@@ -28,14 +26,13 @@ const PatientDemographicSchema = new Schema({
   },
   email: {
     type: String,
-    unique:true,
-    required:false,
+    unique: true,
+    required: false,
   },
   creation_date: {
     type: Date,
     default: Date.now(),
-    required:true,
-
+    required: true,
   },
 });
 
