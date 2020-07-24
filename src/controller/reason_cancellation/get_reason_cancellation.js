@@ -1,5 +1,7 @@
-import ReasonCancellation from "../../models/reason_cancellation.model";
+import ReasonCancellation from '../../models/reason_cancellation.model';
 
-export const getReasonCancellationById = async (id) => {
-  return await ReasonCancellation.findById(id);
+const getReasonCancellationById = async (id) => {
+  return ReasonCancellation.findById(id);
 };
+
+export default getReasonCancellationById;

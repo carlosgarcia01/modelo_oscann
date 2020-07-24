@@ -1,6 +1,8 @@
-import ResultType from "../../models/result_type.model";
+import ResultType from '../../models/result_type.model';
 
-export const createResultType = async (resultType) => {
+const createResultType = async (resultType) => {
   const newResultType = new ResultType(resultType);
-  return await newResultType.save();
+  return newResultType.save();
 };
+
+export default createResultType;

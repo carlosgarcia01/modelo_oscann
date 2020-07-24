@@ -1,5 +1,7 @@
-import ResultType from "../../models/result_type.model";
+import ResultType from '../../models/result_type.model';
 
-export const getResultTypes = async () => {
-  return await ResultType.find();
+const getResultTypes = async () => {
+  return ResultType.find();
 };
+
+export default getResultTypes;
