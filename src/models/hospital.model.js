@@ -1,7 +1,5 @@
 import { Schema, model } from "mongoose";
-import HospitalGroup  from "./hospital_group.model";
-import OscannUid  from "./oscann_uid.model";
-import State  from "./state.model";
+
 
 const HospitalSchema = new Schema({
   name: String,
@@ -18,6 +16,7 @@ const HospitalSchema = new Schema({
   id_hospital:{
     type: String,
     required: true,
+    unique:true
   },
   id_hospital_group: {
     type: Schema.Types.ObjectId, 

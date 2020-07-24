@@ -1,8 +1,4 @@
 import { Schema, model } from "mongoose";
-import Serie from "./serie.js";
-import Patient from "./Patient.model";
-import OscannUid from "./oscann_uid.model";
-import State from "./state.model";
 
 const FileSchema = new Schema({
   protect_file: Boolean,

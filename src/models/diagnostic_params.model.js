@@ -1,13 +1,19 @@
 import { Schema, model } from "mongoose";
 
-const HospitalGroupSchema = new Schema({
+const DiagnosticParamsSchema = new Schema({
   name: String,
   description: String,
+  conclusion: String,
   update_date: Date,
-  id_hospital_group: {
-    type: String,
-    required: true,
-    unique:true
+  id_type_result: {
+    type: Schema.Types.ObjectId, 
+    ref: 'TypeResult', 
+    required: false,
+  },
+  id_study_catalog: {
+    type: Schema.Types.ObjectId, 
+    ref: 'StudyCatalog', 
+    required: false,
   },
   id_state: { 
     type: Schema.Types.ObjectId, 
@@ -25,4 +31,4 @@ const HospitalGroupSchema = new Schema({
   }
 })
 
-export default model('HospitalGroup', HospitalGroupSchema);
+export default model('DiagnosticParams', DiagnosticParamsSchema);
