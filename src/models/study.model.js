@@ -1,12 +1,8 @@
-import { Schema, model } from "mongoose";
-import State from './state.model';
-import User from './state.model';
-import StudyCatalog from './study_catalog.model';
-import ReasonCancellation from './reason_cancellation.model';
+import { Schema, model } from 'mongoose';
 
 const StudySchema = new Schema({
   update_date: Date,
-  medical_appointment_date:Date,
+  medical_appointment_date: Date,
   description: String,
   id_local: {
     type: String,
@@ -33,28 +29,30 @@ const StudySchema = new Schema({
     ref: 'State',
     required: false,
   },
-  series:[{
-    id_calibration:{type:String,required:true},
-    series:[String]
-  }],
+  series: [
+    {
+      id_calibration: { type: String, required: true },
+      series: [String],
+    },
+  ],
   creation_date: {
     type: Date,
     default: Date.now(),
-    required: false
-  }, 
-  cancelled:{
-    flat:Boolean,
-    reason:{
+    required: false,
+  },
+  cancelled: {
+    flat: Boolean,
+    reason: {
       type: Schema.Types.ObjectId,
       ref: 'ReasonCancellation',
-      required:false,
+      required: false,
     },
   },
-  updated:{
-    type:Boolean,
-    default:false,
-    required:false
-  }
-})
+  updated: {
+    type: Boolean,
+    default: false,
+    required: false,
+  },
+});
 
 export default model('Study', StudySchema);
