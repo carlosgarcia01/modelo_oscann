@@ -1,4 +1,4 @@
-import SettingOscann from '../../models/Setting_oscann.model';
+import SettingOscann from '../../models/setting_oscann.model';
 
 const getSettingOscanns = async () => {
   return SettingOscann.find();

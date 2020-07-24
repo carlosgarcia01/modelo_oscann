@@ -1,4 +1,4 @@
-import SettingOscann from '../../models/Setting_oscann.model';
+import SettingOscann from '../../models/setting_oscann.model';
 
 const deleteSettingOscann = async (idSettingOscann) => {
   return SettingOscann.findByIdAndDelete(idSettingOscann);
