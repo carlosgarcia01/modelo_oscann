@@ -1,8 +1,4 @@
-import { Schema, model } from "mongoose";
-import StudyCatalog  from './study_catalog.model';
-import OscannUid  from './oscann_uid.model';
-import State  from './state.model';
-import User  from './user.model';
+import { Schema, model } from 'mongoose';
 
 const SerieCatalogSchema = new Schema({
   name: String,
@@ -17,29 +13,29 @@ const SerieCatalogSchema = new Schema({
     required: false,
   },
   uid_oscann: {
-    type:Schema.Types.ObjectId,
-    ref:'OscannUid',
-    required:false
-  },
-  id_state:{
-    type:Schema.Types.ObjectId,
-    ref:'State',
+    type: Schema.Types.ObjectId,
+    ref: 'OscannUid',
     required: false,
-  } ,
-  retired_by:{
-    type:Schema.Types.ObjectId,
-    ref:'User',
+  },
+  id_state: {
+    type: Schema.Types.ObjectId,
+    ref: 'State',
+    required: false,
+  },
+  retired_by: {
+    type: Schema.Types.ObjectId,
+    ref: 'User',
     required: false,
   },
   creation_date: {
-    type:Date,
+    type: Date,
     default: Date.now(),
   },
-  updated:{
-    type:Boolean,
-    default:false,
-    required:false
-  }
-})
+  updated: {
+    type: Boolean,
+    default: false,
+    required: false,
+  },
+});
 
 export default model('SerieCatalog', SerieCatalogSchema);
