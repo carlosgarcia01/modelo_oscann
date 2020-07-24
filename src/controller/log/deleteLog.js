@@ -1,5 +1,8 @@
-import Log from "../../models/log.model";
+import Log from '../../models/log.model';
 
-export const deleteLog = async (id_log) => {
-  return await Log.findByIdAndDelete(id_log);
+const deleteLog = async (idLog) => {
+  const deletedLog = await Log.findByIdAndDelete(idLog);
+  return deletedLog;
 };
+
+export default deleteLog;
