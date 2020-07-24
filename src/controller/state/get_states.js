@@ -1,7 +1,7 @@
-import State from '../../models/state.model'
+import State from '../../models/state.model';
 
-export const getStates = async () => {
-  return await State.find();
+const getStates = async () => {
+  return State.find();
 };
 
-
+export default getStates;

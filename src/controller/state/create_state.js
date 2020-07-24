@@ -1,7 +1,8 @@
-import State from "../../models/state.model";
+import State from '../../models/state.model';
 
-export const state = async (state) => {
-  const newState = new State(state);
-  return await newState.save();;
+const state = async (stateData) => {
+  const newState = new State(stateData);
+  return newState.save();
 };
 
+export default state;
