@@ -1,4 +1,4 @@
-import Log from "../../models/log.model";
+import Log from '../../models/log.model';
 
 const createLog = async (logObj) => {
   const newLog = new Log(logObj);
