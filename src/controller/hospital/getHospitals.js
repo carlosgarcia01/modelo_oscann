@@ -1,7 +1,7 @@
-import Hospital from "../../models/hospital.model";
+import Hospital from '../../models/hospital.model';
 
-export const getHospitals = async () => {
-  return await Hospital.find();
+const getHospitals = async () => {
+  return Hospital.find();
 };
 
-
+export default getHospitals;

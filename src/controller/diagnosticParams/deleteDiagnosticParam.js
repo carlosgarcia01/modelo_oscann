@@ -1,6 +1,7 @@
-import DiagnosticParams from '../../models/diagnostic_params.model'
+import DiagnosticParams from '../../models/diagnostic_params.model';
 
-export const deleteDiagnosticParams = async (id_diagnosticParams) => {
-  return await DiagnosticParams.findByIdAndDelete(id_diagnosticParams)
+const deleteDiagnosticParams = async (idDiagnosticParams) => {
+  return DiagnosticParams.findByIdAndDelete(idDiagnosticParams);
 };
 
+export default deleteDiagnosticParams;
