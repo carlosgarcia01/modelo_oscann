@@ -1,10 +1,6 @@
-import { Schema, model } from "mongoose";
-import State from './state.model';
-import Hospital from './hospital.model';
-import UserType from './user_type.model';
+import { Schema, model } from 'mongoose';
 
 const UserSchema = new Schema({
-  
   name: String,
   password: String,
   contact_number: String,
@@ -21,7 +17,7 @@ const UserSchema = new Schema({
     required: true,
   },
   id_state: {
-    type: Schema.Types.ObjectId, 
+    type: Schema.Types.ObjectId,
     ref: 'State',
     required: false,
   },
@@ -35,11 +31,11 @@ const UserSchema = new Schema({
     required: true,
     default: Date.now(),
   },
-  updated:{
-    type:Boolean,
-    default:false,
-    required:false,
-  }
-})
+  updated: {
+    type: Boolean,
+    default: false,
+    required: false,
+  },
+});
 
 export default model('User', UserSchema);
