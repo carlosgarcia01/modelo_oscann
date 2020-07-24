@@ -1,7 +1,9 @@
-import PatientDemographic from "../../models/patient_demographics.model";
+import PatientDemographic from '../../models/patient_demographics';
 
-export const updatePatientDemographic = async (id, patientDemographic) => {
-  return await PatientDemographic.findByIdAndUpdate(id, patientDemographic, {
+const updatePatientDemographic = async (id, patientDemographic) => {
+  return PatientDemographic.findByIdAndUpdate(id, patientDemographic, {
     new: true,
   });
 };
+
+export default updatePatientDemographic;
