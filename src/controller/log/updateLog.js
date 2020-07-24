@@ -1,5 +1,8 @@
-import Log from "../../models/log.model";
+import Log from '../../models/log.model';
 
-export const updateLog = async (id, log) => {
-  return await Log.findByIdAndUpdate(id, log, { new: true });
+const updateLog = async (id, log) => {
+  const logUpdated = await Log.findByIdAndUpdate(id, log, { new: true });
+  return logUpdated;
 };
+
+export default updateLog;
