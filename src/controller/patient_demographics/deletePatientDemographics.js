@@ -1,5 +1,7 @@
-import PatientDemographic from "../../models/patient_demographics.model";
+import PatientDemographic from '../../models/patient_demographics';
 
-export const deletePatientDemographics = async (id_patientDemographics) => {
-  return await PatientDemographic.findByIdAndDelete(id_patientDemographics);
+const deletePatientDemographics = async (idPatientDemographics) => {
+  return PatientDemographic.findByIdAndDelete(idPatientDemographics);
 };
+
+export default deletePatientDemographics;

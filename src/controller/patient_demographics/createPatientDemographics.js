@@ -1,4 +1,4 @@
-import PatientDemographic from "../../models/patient_demographics.model";
+import PatientDemographic from '../../models/patient_demographics';
 
 const createPatientDemographics = async (patientDemographicsObj) => {
   const newPatientDemographics = new PatientDemographic(patientDemographicsObj);
