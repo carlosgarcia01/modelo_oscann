@@ -1,5 +1,7 @@
-import SerieCatalog from "../../models/serie_catalog.model";
+import SerieCatalog from '../../models/serie_catalog.model';
 
-export const updateSerieCatalog = async (id, serieCatalog,) => {
-  return await SerieCatalog.findByIdAndUpdate(id, serieCatalog, { new: true });
+const updateSerieCatalog = async (id, serieCatalog) => {
+  return SerieCatalog.findByIdAndUpdate(id, serieCatalog, { new: true });
 };
+
+export default updateSerieCatalog;

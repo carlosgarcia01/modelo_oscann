@@ -1,6 +1,8 @@
-import ReasonCancellation from "../../models/reason_cancellation.model";
+import ReasonCancellation from '../../models/reason_cancellation.model';
 
-export const createReasonCancellation = async (reasonCancellation) => {
+const createReasonCancellation = async (reasonCancellation) => {
   const newReasonCancellation = new ReasonCancellation(reasonCancellation);
-  return await newReasonCancellation.save();
+  return newReasonCancellation.save();
 };
+
+export default createReasonCancellation;

@@ -1,5 +1,7 @@
-import Serie from "../../models/serie.model";;
+import Serie from '../../models/serie.model';
 
-export const deleteSerie = async (id_serie) => {
-  return await Serie.findByIdAndDelete(id_serie)
+const deleteSerie = async (idSerie) => {
+  return Serie.findByIdAndDelete(idSerie);
 };
+
+export default deleteSerie;

@@ -1,5 +1,7 @@
-import Serie from "../../models/serie.model";;
+import Serie from '../../models/serie.model';
 
-export const getSeries = async () => {
-  return await Serie.find();
+const getSeries = async () => {
+  return Serie.find();
 };
+
+export default getSeries;

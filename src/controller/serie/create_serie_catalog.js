@@ -1,6 +1,8 @@
-import Serie from "../../models/serie.model";;
+import Serie from '../../models/serie.model';
 
-export const createSerie = async (serie) => {
+const createSerie = async (serie) => {
   const newSerie = new Serie(serie);
-  return await newSerie.save();
+  return newSerie.save();
 };
+
+export default createSerie;
