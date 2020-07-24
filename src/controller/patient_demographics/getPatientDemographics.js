@@ -1,6 +1,8 @@
-import PatientDemographic from "../../models/patient_demographics.model";
+import PatientDemographic from '../../models/patient_demographics';
 
-export const getPatientDemographicsById = async (id) => {
+const getPatientDemographicsById = async (id) => {
   const patientDemographicsReturn = await PatientDemographic.findById(id);
   return patientDemographicsReturn;
 };
+
+export default getPatientDemographicsById;
