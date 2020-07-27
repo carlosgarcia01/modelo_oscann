@@ -7,7 +7,7 @@ const { log, error } = console;
 
 async function main() {
   try {
-    const OscannUid = {
+    const PatientDemographics = {
       name: 'Some name',
       last_name: 'Some lastname',
       date_of_birth: 115864358506,
@@ -20,9 +20,9 @@ async function main() {
       id_PatientDemographic: 'PATIENTDEMO1',
       creation_date: 115864358506,
     };
-    const savedOscannUid = await createPatientDemographics(OscannUid);
-    log(savedOscannUid);
-    return savedOscannUid;
+    const savedPatientDemographics = await createPatientDemographics(PatientDemographics);
+    log(savedPatientDemographics);
+    return savedPatientDemographics;
   } catch (err) {
     error(err);
     return err;
